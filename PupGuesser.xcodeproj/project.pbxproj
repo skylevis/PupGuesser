@@ -33,9 +33,22 @@
 		208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		208BB20E2DEB0B29007E2DB4 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		208BB1AA2DEADF5A007E2DB4 /* PupGuesser */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				208BB20E2DEB0B29007E2DB4 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */,
+			);
 			path = PupGuesser;
 			sourceTree = "<group>";
 		};
@@ -405,7 +418,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PupGuesser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -436,7 +450,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PupGuesser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

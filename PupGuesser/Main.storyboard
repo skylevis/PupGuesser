@@ -29,10 +29,10 @@
         <scene sceneID="mrx-1o-9uX">
             <objects>
                 <viewController id="ptH-8S-Z2p" customClass="MenuViewController" customModule="PupGuesser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1b2-er-mui">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1b2-er-mui">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="hXe-os-Dzr"/>
+                        <viewLayoutGuide key="safeArea" id="RGd-7x-C1p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="EQk-dL-Ygk"/>

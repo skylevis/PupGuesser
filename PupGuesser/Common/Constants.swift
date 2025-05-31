@@ -38,3 +38,7 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
+
+class Constants {
+    static let baseURLString = "https://dog.ceo/api"
+}

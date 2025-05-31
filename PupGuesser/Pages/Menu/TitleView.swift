@@ -26,7 +26,8 @@ class TitleView: UIView {
         addSubview(titleCard)
         
         titleLogo.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview()
+            make.centerX.equalToSuperview()
             make.height.width.equalTo(160)
         }
         titleCard.snp.makeConstraints { make in
