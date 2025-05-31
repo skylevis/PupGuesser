@@ -6,41 +6,45 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 208BB2012DEAF08D007E2DB4 /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		20FEB2952DEACC8D00EDAE02 /* PBXContainerItemProxy */ = {
+		208BB1BA2DEADF5D007E2DB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 20FEB27E2DEACC8900EDAE02 /* Project object */;
+			containerPortal = 208BB1A02DEADF5A007E2DB4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 20FEB2852DEACC8900EDAE02;
+			remoteGlobalIDString = 208BB1A72DEADF5A007E2DB4;
 			remoteInfo = PupGuesser;
 		};
-		20FEB29F2DEACC8D00EDAE02 /* PBXContainerItemProxy */ = {
+		208BB1C42DEADF5D007E2DB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 20FEB27E2DEACC8900EDAE02 /* Project object */;
+			containerPortal = 208BB1A02DEADF5A007E2DB4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 20FEB2852DEACC8900EDAE02;
+			remoteGlobalIDString = 208BB1A72DEADF5A007E2DB4;
 			remoteInfo = PupGuesser;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20FEB2862DEACC8900EDAE02 /* PupGuesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGuesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FEB2942DEACC8D00EDAE02 /* PupGuesserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FEB29E2DEACC8D00EDAE02 /* PupGuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGuesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		20FEB2882DEACC8900EDAE02 /* PupGuesser */ = {
+		208BB1AA2DEADF5A007E2DB4 /* PupGuesser */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PupGuesser;
 			sourceTree = "<group>";
 		};
-		20FEB2972DEACC8D00EDAE02 /* PupGuesserTests */ = {
+		208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PupGuesserTests;
 			sourceTree = "<group>";
 		};
-		20FEB2A12DEACC8D00EDAE02 /* PupGuesserUITests */ = {
+		208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PupGuesserUITests;
 			sourceTree = "<group>";
@@ -48,21 +52,22 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20FEB2832DEACC8900EDAE02 /* Frameworks */ = {
+		208BB1A52DEADF5A007E2DB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208BB1B62DEADF5D007E2DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FEB2912DEACC8D00EDAE02 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20FEB29B2DEACC8D00EDAE02 /* Frameworks */ = {
+		208BB1C02DEADF5D007E2DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20FEB27D2DEACC8900EDAE02 = {
+		208BB19F2DEADF5A007E2DB4 = {
 			isa = PBXGroup;
 			children = (
-				20FEB2882DEACC8900EDAE02 /* PupGuesser */,
-				20FEB2972DEACC8D00EDAE02 /* PupGuesserTests */,
-				20FEB2A12DEACC8D00EDAE02 /* PupGuesserUITests */,
-				20FEB2872DEACC8900EDAE02 /* Products */,
+				208BB1AA2DEADF5A007E2DB4 /* PupGuesser */,
+				208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */,
+				208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */,
+				208BB1A92DEADF5A007E2DB4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		20FEB2872DEACC8900EDAE02 /* Products */ = {
+		208BB1A92DEADF5A007E2DB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20FEB2862DEACC8900EDAE02 /* PupGuesser.app */,
-				20FEB2942DEACC8D00EDAE02 /* PupGuesserTests.xctest */,
-				20FEB29E2DEACC8D00EDAE02 /* PupGuesserUITests.xctest */,
+				208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */,
+				208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */,
+				208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +100,138 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20FEB2852DEACC8900EDAE02 /* PupGuesser */ = {
+		208BB1A72DEADF5A007E2DB4 /* PupGuesser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20FEB2A82DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesser" */;
+			buildConfigurationList = 208BB1CD2DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesser" */;
 			buildPhases = (
-				20FEB2822DEACC8900EDAE02 /* Sources */,
-				20FEB2832DEACC8900EDAE02 /* Frameworks */,
-				20FEB2842DEACC8900EDAE02 /* Resources */,
+				208BB1A42DEADF5A007E2DB4 /* Sources */,
+				208BB1A52DEADF5A007E2DB4 /* Frameworks */,
+				208BB1A62DEADF5A007E2DB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				20FEB2882DEACC8900EDAE02 /* PupGuesser */,
+				208BB1AA2DEADF5A007E2DB4 /* PupGuesser */,
 			);
 			name = PupGuesser;
 			packageProductDependencies = (
+				208BB2012DEAF08D007E2DB4 /* SnapKit */,
 			);
 			productName = PupGuesser;
-			productReference = 20FEB2862DEACC8900EDAE02 /* PupGuesser.app */;
+			productReference = 208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		20FEB2932DEACC8D00EDAE02 /* PupGuesserTests */ = {
+		208BB1B82DEADF5D007E2DB4 /* PupGuesserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20FEB2AB2DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */;
+			buildConfigurationList = 208BB1D02DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */;
 			buildPhases = (
-				20FEB2902DEACC8D00EDAE02 /* Sources */,
-				20FEB2912DEACC8D00EDAE02 /* Frameworks */,
-				20FEB2922DEACC8D00EDAE02 /* Resources */,
+				208BB1B52DEADF5D007E2DB4 /* Sources */,
+				208BB1B62DEADF5D007E2DB4 /* Frameworks */,
+				208BB1B72DEADF5D007E2DB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				20FEB2962DEACC8D00EDAE02 /* PBXTargetDependency */,
+				208BB1BB2DEADF5D007E2DB4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				20FEB2972DEACC8D00EDAE02 /* PupGuesserTests */,
+				208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */,
 			);
 			name = PupGuesserTests;
 			packageProductDependencies = (
 			);
 			productName = PupGuesserTests;
-			productReference = 20FEB2942DEACC8D00EDAE02 /* PupGuesserTests.xctest */;
+			productReference = 208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		20FEB29D2DEACC8D00EDAE02 /* PupGuesserUITests */ = {
+		208BB1C22DEADF5D007E2DB4 /* PupGuesserUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20FEB2AE2DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */;
+			buildConfigurationList = 208BB1D32DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */;
 			buildPhases = (
-				20FEB29A2DEACC8D00EDAE02 /* Sources */,
-				20FEB29B2DEACC8D00EDAE02 /* Frameworks */,
-				20FEB29C2DEACC8D00EDAE02 /* Resources */,
+				208BB1BF2DEADF5D007E2DB4 /* Sources */,
+				208BB1C02DEADF5D007E2DB4 /* Frameworks */,
+				208BB1C12DEADF5D007E2DB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				20FEB2A02DEACC8D00EDAE02 /* PBXTargetDependency */,
+				208BB1C52DEADF5D007E2DB4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				20FEB2A12DEACC8D00EDAE02 /* PupGuesserUITests */,
+				208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */,
 			);
 			name = PupGuesserUITests;
 			packageProductDependencies = (
 			);
 			productName = PupGuesserUITests;
-			productReference = 20FEB29E2DEACC8D00EDAE02 /* PupGuesserUITests.xctest */;
+			productReference = 208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		20FEB27E2DEACC8900EDAE02 /* Project object */ = {
+		208BB1A02DEADF5A007E2DB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					20FEB2852DEACC8900EDAE02 = {
+					208BB1A72DEADF5A007E2DB4 = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					20FEB2932DEACC8D00EDAE02 = {
+					208BB1B82DEADF5D007E2DB4 = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 20FEB2852DEACC8900EDAE02;
+						TestTargetID = 208BB1A72DEADF5A007E2DB4;
 					};
-					20FEB29D2DEACC8D00EDAE02 = {
+					208BB1C22DEADF5D007E2DB4 = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 20FEB2852DEACC8900EDAE02;
+						TestTargetID = 208BB1A72DEADF5A007E2DB4;
 					};
 				};
 			};
-			buildConfigurationList = 20FEB2812DEACC8900EDAE02 /* Build configuration list for PBXProject "PupGuesser" */;
+			buildConfigurationList = 208BB1A32DEADF5A007E2DB4 /* Build configuration list for PBXProject "PupGuesser" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 20FEB27D2DEACC8900EDAE02;
+			mainGroup = 208BB19F2DEADF5A007E2DB4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 20FEB2872DEACC8900EDAE02 /* Products */;
+			productRefGroup = 208BB1A92DEADF5A007E2DB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20FEB2852DEACC8900EDAE02 /* PupGuesser */,
-				20FEB2932DEACC8D00EDAE02 /* PupGuesserTests */,
-				20FEB29D2DEACC8D00EDAE02 /* PupGuesserUITests */,
+				208BB1A72DEADF5A007E2DB4 /* PupGuesser */,
+				208BB1B82DEADF5D007E2DB4 /* PupGuesserTests */,
+				208BB1C22DEADF5D007E2DB4 /* PupGuesserUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		20FEB2842DEACC8900EDAE02 /* Resources */ = {
+		208BB1A62DEADF5A007E2DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FEB2922DEACC8D00EDAE02 /* Resources */ = {
+		208BB1B72DEADF5D007E2DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FEB29C2DEACC8D00EDAE02 /* Resources */ = {
+		208BB1C12DEADF5D007E2DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +241,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20FEB2822DEACC8900EDAE02 /* Sources */ = {
+		208BB1A42DEADF5A007E2DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FEB2902DEACC8D00EDAE02 /* Sources */ = {
+		208BB1B52DEADF5D007E2DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FEB29A2DEACC8D00EDAE02 /* Sources */ = {
+		208BB1BF2DEADF5D007E2DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +265,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20FEB2962DEACC8D00EDAE02 /* PBXTargetDependency */ = {
+		208BB1BB2DEADF5D007E2DB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 20FEB2852DEACC8900EDAE02 /* PupGuesser */;
-			targetProxy = 20FEB2952DEACC8D00EDAE02 /* PBXContainerItemProxy */;
+			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
+			targetProxy = 208BB1BA2DEADF5D007E2DB4 /* PBXContainerItemProxy */;
 		};
-		20FEB2A02DEACC8D00EDAE02 /* PBXTargetDependency */ = {
+		208BB1C52DEADF5D007E2DB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 20FEB2852DEACC8900EDAE02 /* PupGuesser */;
-			targetProxy = 20FEB29F2DEACC8D00EDAE02 /* PBXContainerItemProxy */;
+			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
+			targetProxy = 208BB1C42DEADF5D007E2DB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		20FEB2A62DEACC8D00EDAE02 /* Debug */ = {
+		208BB1CB2DEADF5D007E2DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +341,7 @@
 			};
 			name = Debug;
 		};
-		20FEB2A72DEACC8D00EDAE02 /* Release */ = {
+		208BB1CC2DEADF5D007E2DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -387,7 +396,7 @@
 			};
 			name = Release;
 		};
-		20FEB2A92DEACC8D00EDAE02 /* Debug */ = {
+		208BB1CE2DEADF5D007E2DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -396,9 +405,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -416,7 +427,7 @@
 			};
 			name = Debug;
 		};
-		20FEB2AA2DEACC8D00EDAE02 /* Release */ = {
+		208BB1CF2DEADF5D007E2DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -425,9 +436,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -445,7 +458,7 @@
 			};
 			name = Release;
 		};
-		20FEB2AC2DEACC8D00EDAE02 /* Debug */ = {
+		208BB1D12DEADF5D007E2DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,7 +475,7 @@
 			};
 			name = Debug;
 		};
-		20FEB2AD2DEACC8D00EDAE02 /* Release */ = {
+		208BB1D22DEADF5D007E2DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -479,7 +492,7 @@
 			};
 			name = Release;
 		};
-		20FEB2AF2DEACC8D00EDAE02 /* Debug */ = {
+		208BB1D42DEADF5D007E2DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -494,7 +507,7 @@
 			};
 			name = Debug;
 		};
-		20FEB2B02DEACC8D00EDAE02 /* Release */ = {
+		208BB1D52DEADF5D007E2DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -512,43 +525,62 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20FEB2812DEACC8900EDAE02 /* Build configuration list for PBXProject "PupGuesser" */ = {
+		208BB1A32DEADF5A007E2DB4 /* Build configuration list for PBXProject "PupGuesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20FEB2A62DEACC8D00EDAE02 /* Debug */,
-				20FEB2A72DEACC8D00EDAE02 /* Release */,
+				208BB1CB2DEADF5D007E2DB4 /* Debug */,
+				208BB1CC2DEADF5D007E2DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20FEB2A82DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesser" */ = {
+		208BB1CD2DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20FEB2A92DEACC8D00EDAE02 /* Debug */,
-				20FEB2AA2DEACC8D00EDAE02 /* Release */,
+				208BB1CE2DEADF5D007E2DB4 /* Debug */,
+				208BB1CF2DEADF5D007E2DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20FEB2AB2DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */ = {
+		208BB1D02DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20FEB2AC2DEACC8D00EDAE02 /* Debug */,
-				20FEB2AD2DEACC8D00EDAE02 /* Release */,
+				208BB1D12DEADF5D007E2DB4 /* Debug */,
+				208BB1D22DEADF5D007E2DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20FEB2AE2DEACC8D00EDAE02 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */ = {
+		208BB1D32DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20FEB2AF2DEACC8D00EDAE02 /* Debug */,
-				20FEB2B02DEACC8D00EDAE02 /* Release */,
+				208BB1D42DEADF5D007E2DB4 /* Debug */,
+				208BB1D52DEADF5D007E2DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		208BB2012DEAF08D007E2DB4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 20FEB27E2DEACC8900EDAE02 /* Project object */;
+	rootObject = 208BB1A02DEADF5A007E2DB4 /* Project object */;
 }
