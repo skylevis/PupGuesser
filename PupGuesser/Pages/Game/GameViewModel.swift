@@ -17,11 +17,13 @@ protocol GameViewModelProtocol {
     
     func fetchNextRound() -> AnyPublisher<GameRound, Error>
     func submitAnswer(index: Int) -> Bool
+    func saveScores()
 }
 
 class GameViewModel: GameViewModelProtocol {
     private var breedsList: [Breed] = [] // Cached
     private var networkService: NetworkServiceProtocol
+    private var gameStorage: GameStorageProtocol
     
     // Game Configuration
     private let numOptions = 4
@@ -33,8 +35,10 @@ class GameViewModel: GameViewModelProtocol {
     var score = 0
     var selectedOption: Breed?
     
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
+    init(networkService: NetworkServiceProtocol = NetworkService(),
+         gameStorage: GameStorageProtocol = GameStorage()) {
         self.networkService = networkService
+        self.gameStorage = gameStorage
     }
     
     func fetchNextRound() -> AnyPublisher<GameRound, Error> {
@@ -45,8 +49,9 @@ class GameViewModel: GameViewModelProtocol {
                 guard let self else {
                     return gameRound
                 }
+                self.gameStorage.savePuppy(breed: gameRound.selectedBreed, imageURL: gameRound.imageData.url)
                 self.currentGameRound = gameRound
-                self.currentRound += 1 
+                self.currentRound += 1
                 return gameRound
             }
             .eraseToAnyPublisher()
@@ -65,7 +70,12 @@ class GameViewModel: GameViewModelProtocol {
         } else {
             streak = 0
         }
+        saveScores()
         return isCorrect
+    }
+    
+    func saveScores() {
+        gameStorage.saveHiScore(score, streak: streak)
     }
     
     private func fetchBreedList() -> AnyPublisher<[Breed], Error> {
@@ -75,7 +85,7 @@ class GameViewModel: GameViewModelProtocol {
         return Just(self.breedsList).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
     
-    private func fetchRandomImage(for breed: Breed) -> AnyPublisher<Data, Error> {
+    private func fetchRandomImage(for breed: Breed) -> AnyPublisher<ImageData, Error> {
         return networkService.getRandomImage(breed: breed)
     }
     
@@ -96,7 +106,7 @@ class GameViewModel: GameViewModelProtocol {
 }
 
 struct GameRound {
-    let imageData: Data
+    let imageData: ImageData
     let selectedBreed: Breed
     let options: [Breed]
 }

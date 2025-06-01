@@ -12,6 +12,7 @@ extension UIColor {
     static let contentSecondary = UIColor(hex: "A89F91")
     static let contentInverse = UIColor(hex: "FFFFFF")
     static let basePrimary = UIColor(hex: "FAEBD7")
+    static let baseSecondary = UIColor(hex: "CC5189")
     static let selectionPrimary = UIColor(hex: "FFA94D")
     static let accentPrimary = UIColor(hex: "FFE5B4")
     

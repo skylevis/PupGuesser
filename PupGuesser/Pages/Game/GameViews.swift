@@ -87,7 +87,7 @@ class GameRoundView: UIView {
     
     func startGame(_ gameRound: GameRound) {
         resetView()
-        let image = UIImage(data: gameRound.imageData)
+        let image = UIImage(data: gameRound.imageData.data)
         puppyImage.image = image
         optionCollectionView.reloadData()
     }

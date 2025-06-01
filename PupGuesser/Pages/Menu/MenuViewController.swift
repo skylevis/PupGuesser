@@ -49,7 +49,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc private func viewPuppedia() {
-        
+        let puppediaVC = PuppediaViewController()
+        navigationController?.pushViewController(puppediaVC, animated: true)
     }
     
     @objc private func viewHiscore() {

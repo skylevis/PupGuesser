@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Equatable {
+struct Breed: Codable, Equatable {
     let name: String
     let subBreed: String?
     

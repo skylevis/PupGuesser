@@ -10,7 +10,7 @@ import Combine
 
 protocol NetworkServiceProtocol {
     func getAllBreeds() -> AnyPublisher<[Breed], Error>
-    func getRandomImage(breed: Breed) -> AnyPublisher<Data, Error>
+    func getRandomImage(breed: Breed) -> AnyPublisher<ImageData, Error>
 }
 
 class NetworkService: NetworkServiceProtocol {
@@ -42,7 +42,7 @@ class NetworkService: NetworkServiceProtocol {
             .eraseToAnyPublisher()
     }
     
-    func getRandomImage(breed: Breed) -> AnyPublisher<Data, Error> {
+    func getRandomImage(breed: Breed) -> AnyPublisher<ImageData, Error> {
         guard let url = Request.randomImage(breed: breed).getRequestURL() else {
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
@@ -57,13 +57,14 @@ class NetworkService: NetworkServiceProtocol {
             .eraseToAnyPublisher()
     }
     
-    private func loadImage(from url: URL) -> AnyPublisher<Data, Error> {
+    private func loadImage(from url: URL) -> AnyPublisher<ImageData, Error> {
         return Future { [weak self] promise in
             guard let self else { return }
             Task {
                 do {
                     let (data, _) = try await self.session.data(from: url)
-                    promise(.success(data))
+                    let imageData = ImageData(url: url.absoluteString, data: data)
+                    promise(.success(imageData))
                 } catch {
                     promise(.failure(NetworkError.unexpected(message: "Failed to load image for \(url.absoluteString)")))
                 }
@@ -87,12 +88,12 @@ enum NetworkError: Error {
     case unexpected(message: String)
 }
 
-struct BreedResponseModel: Codable {
+private struct BreedResponseModel: Codable {
     let message: [String: [String]]
     let status: String
 }
 
-struct ImageResponseModel: Codable {
+private struct ImageResponseModel: Codable {
     let message: String
     let status: String
 }

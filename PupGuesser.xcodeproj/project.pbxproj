@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 208BB2012DEAF08D007E2DB4 /* SnapKit */; };
+		20A982152DEC003A00B2630E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 20A982142DEC003A00B2630E /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A982152DEC003A00B2630E /* SDWebImage in Frameworks */,
 				208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +133,7 @@
 			name = PupGuesser;
 			packageProductDependencies = (
 				208BB2012DEAF08D007E2DB4 /* SnapKit */,
+				20A982142DEC003A00B2630E /* SDWebImage */,
 			);
 			productName = PupGuesser;
 			productReference = 208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */;
@@ -216,6 +219,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 208BB1A92DEADF5A007E2DB4 /* Products */;
@@ -587,6 +591,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -594,6 +606,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		20A982142DEC003A00B2630E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
