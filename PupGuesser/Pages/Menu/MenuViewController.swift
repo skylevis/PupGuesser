@@ -54,6 +54,7 @@ class MenuViewController: UIViewController {
     }
     
     @objc private func viewHiscore() {
-        
+        let hiscoreVC = HiscoreViewController()
+        navigationController?.pushViewController(hiscoreVC, animated: true)
     }
 }

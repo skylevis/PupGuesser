@@ -12,7 +12,7 @@ protocol GameStorageProtocol {
     func getAllDiscoveredBreeds() -> [Breed]
     func getAllImageURLs(for breed: Breed) -> [String]
     func saveHiScore(_ score: Int, streak: Int)
-    func getHiScore() -> (score: Int, streak: Int)
+    func getHiScore() -> HiScores
     func resetStorage()
 }
 
@@ -62,9 +62,9 @@ class GameStorage: GameStorageProtocol {
         saveHiscore(newHiscore)
     }
     
-    func getHiScore() -> (score: Int, streak: Int) {
+    func getHiScore() -> HiScores {
         let currentHiscore = getHiscore() ?? HiScores(score: 0, streak: 0)
-        return (currentHiscore.score, currentHiscore.streak)
+        return currentHiscore
     }
     
     func resetStorage() {
