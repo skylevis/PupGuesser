@@ -20,7 +20,9 @@ class BreedTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
+        backgroundColor = .contentInverse
         contentView.addSubview(breedLabel)
+        
         breedLabel.snp.makeConstraints { make in
             make.directionalEdges.equalToSuperview().inset(8)
         }

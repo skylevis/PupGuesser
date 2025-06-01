@@ -33,7 +33,9 @@ class PuppediaViewModel: PuppediaViewModelProtocol {
     }
     
     func fetchPuppedia() -> [Breed] {
-        discoveredList = gameStorage.getAllDiscoveredBreeds()
+        discoveredList = gameStorage.getAllDiscoveredBreeds().sorted { a, b in
+            a.displayName.localizedCaseInsensitiveCompare(b.displayName) == .orderedAscending
+        }
         return discoveredList
     }
     

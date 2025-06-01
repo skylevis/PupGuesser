@@ -16,8 +16,8 @@ class PuppediaViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     
     init(viewModel: PuppediaViewModelProtocol = PuppediaViewModel()) {
-        super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -27,8 +27,18 @@ class PuppediaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        updateNavigationBar()
         setupView()
         fetchData()
+    }
+    
+    private func updateNavigationBar() {
+        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 20, weight: .semibold),
+                                                                   .foregroundColor: UIColor.contentPrimary]
+        navigationController?.navigationBar.tintColor = .contentPrimary
+        navigationController?.navigationBar.backIndicatorImage = UIImage(systemName: "chevron.left")
+        navigationController?.navigationBar.backItem?.title = ""
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.left")
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -37,8 +47,9 @@ class PuppediaViewController: UIViewController {
     }
     
     private func setupView() {
-        title = "Puppedia"
-        let stackView = UIStackView(axis: .horizontal, spacing: 12)
+        title = "My Puppedia"
+        view.backgroundColor = .basePrimary
+        let stackView = UIStackView(axis: .horizontal, spacing: 4)
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.addArrangedSubview(puppyTableView)
@@ -46,7 +57,7 @@ class PuppediaViewController: UIViewController {
         view.addSubview(stackView)
         
         stackView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview().inset(12)
         }
         puppyTableView.snp.makeConstraints { make in
@@ -74,7 +85,7 @@ class PuppediaViewController: UIViewController {
     
     private func createTableView() -> UITableView {
         let tableView = UITableView(frame: .zero)
-        tableView.backgroundColor = .accentPrimary
+        tableView.backgroundColor = .clear
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(BreedTableViewCell.self, forCellReuseIdentifier: "BreedTableViewCell")
@@ -87,8 +98,9 @@ class PuppediaViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
+        layout.sectionInset = .init(top: 8, left: 8, bottom: 8, right: 8)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .accentPrimary
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(BreedImageCollectionViewCell.self, forCellWithReuseIdentifier: "BreedImageCollectionViewCell")
@@ -124,10 +136,10 @@ extension PuppediaViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let totalBreeds = viewModel.breedList else {
+        guard let _ = viewModel.breedList else {
             return 0
         }
-        return BreedTableHeaderView.viewHeight
+        return BreedTableHeaderView.viewHeight + 8
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -136,7 +148,7 @@ extension PuppediaViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension PuppediaViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PuppediaViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.imageUrls.count
     }
@@ -148,6 +160,15 @@ extension PuppediaViewController: UICollectionViewDelegate, UICollectionViewData
         }
         breedImageCell.setImage(url: viewModel.imageUrls[indexPath.row])
         return breedImageCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let columns: CGFloat = viewModel.imageUrls.count > 10 ? 2.0 : 1.0 // If more than 10 images, use 2 columns instead
+        let spacing: CGFloat = 12.0
+        let sectionInset: CGFloat = 16.0
+        let totalSpacing = spacing * (columns - 1)
+        let cellWidth = (collectionView.bounds.width - totalSpacing - sectionInset) / columns
+        return CGSize(width: cellWidth, height: cellWidth)
     }
 }
 

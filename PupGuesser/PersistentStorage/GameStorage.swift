@@ -77,12 +77,20 @@ class GameStorage: GameStorageProtocol {
     }
     
     private func getPuppedia() -> [String: PuppediaEntry] {
-        guard let localStorage = UserDefaults(suiteName: bundleSuite),
-              let puppedia = localStorage.dictionary(forKey: puppediaKey) as? [String: PuppediaEntry] else {
+        guard let localStorage = UserDefaults(suiteName: bundleSuite) else {
             ErrorLogger.logError(error: StorageError.failedToInitStorage, category: "GameStorage")
             return [:]
         }
-        return puppedia
+        guard let puppediaData = localStorage.data(forKey: puppediaKey) else {
+            return [:]
+        }
+        do {
+            let puppedia = try JSONDecoder().decode([String: PuppediaEntry].self, from: puppediaData)
+            return puppedia
+        } catch {
+            ErrorLogger.logError(error: error, category: "GameStorage")
+            return [:]
+        }
     }
     
     private func savePuppedia(_ puppedia: [String: PuppediaEntry]) {
@@ -90,15 +98,26 @@ class GameStorage: GameStorageProtocol {
             ErrorLogger.logError(error: StorageError.failedToInitStorage, category: "GameStorage")
             return
         }
-        localStorage.set(puppedia, forKey: puppediaKey)
+        do {
+            let json = try JSONEncoder().encode(puppedia)
+            localStorage.set(json, forKey: puppediaKey)
+        } catch {
+            ErrorLogger.logError(error: error, category: "GameStorage")
+        }
     }
     
     private func getHiscore() -> HiScores? {
         guard let localStorage = UserDefaults(suiteName: bundleSuite),
-              let hiscores = localStorage.object(forKey: hiscoreKey) as? HiScores else {
+              let hiscoresData = localStorage.data(forKey: hiscoreKey) else {
             return nil
         }
-        return hiscores
+        do {
+            let hiscores = try JSONDecoder().decode(HiScores.self, from: hiscoresData)
+            return hiscores
+        } catch {
+            ErrorLogger.logError(error: error, category: "GameStorage")
+            return nil
+        }
     }
     
     private func saveHiscore(_ hiscore: HiScores) {
@@ -106,7 +125,12 @@ class GameStorage: GameStorageProtocol {
             ErrorLogger.logError(error: StorageError.failedToInitStorage, category: "GameStorage")
             return
         }
-        localStorage.set(hiscore, forKey: hiscoreKey)
+        do {
+            let json = try JSONEncoder().encode(hiscore)
+            localStorage.set(json, forKey: hiscoreKey)
+        } catch {
+            ErrorLogger.logError(error: error, category: "GameStorage")
+        }
     }
 }
 
