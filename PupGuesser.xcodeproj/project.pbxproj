@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 208BB2012DEAF08D007E2DB4 /* SnapKit */; };
 		20A982152DEC003A00B2630E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 20A982142DEC003A00B2630E /* SDWebImage */; };
+		20C7383E2DEC393500F151FA /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 20C7383D2DEC393500F151FA /* Quick */; };
+		20C738412DEC396100F151FA /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 20C738402DEC396100F151FA /* Nimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C7383E2DEC393500F151FA /* Quick in Frameworks */,
+				20C738412DEC396100F151FA /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +161,8 @@
 			);
 			name = PupGuesserTests;
 			packageProductDependencies = (
+				20C7383D2DEC393500F151FA /* Quick */,
+				20C738402DEC396100F151FA /* Nimble */,
 			);
 			productName = PupGuesserTests;
 			productReference = 208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */;
@@ -220,6 +226,8 @@
 			packageReferences = (
 				208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */,
+				20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 208BB1A92DEADF5A007E2DB4 /* Products */;
@@ -488,6 +496,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGuesser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PupGuesser";
@@ -505,6 +514,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGuesser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PupGuesser";
@@ -599,6 +609,22 @@
 				minimumVersion = 5.21.0;
 			};
 		};
+		20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -611,6 +637,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		20C7383D2DEC393500F151FA /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		20C738402DEC396100F151FA /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
