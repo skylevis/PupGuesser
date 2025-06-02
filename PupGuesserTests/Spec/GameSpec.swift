@@ -31,17 +31,11 @@ final class GameSpec: QuickSpec {
             
             it("should be able to load the next round and update the game state correctly") {
                 waitUntil(timeout: .seconds(3)) { done in
-                    gameVM.$currentGameRound
-                        .sink { completion in
-                            if case .failure(let error) = completion {
-                                fail("Failed to fetch next round - \(error)")
-                            }
-                            done()
-                        } receiveValue: { _ in
-                            
-                        }
-                        .store(in: &cancellables)
-                    gameVM.loadNextRound()
+                    Task {
+                        gameVM.loadNextRound()
+                        try! await Task.sleep(for: .seconds(1))
+                        done()
+                    }
                 }
                 expect(gameVM.currentGameRound).toNot(beNil())
                 expect(gameVM.gameState).to(equal(GameState.playing))
