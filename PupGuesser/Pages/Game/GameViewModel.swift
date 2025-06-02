@@ -2,7 +2,7 @@
 //  GameViewModel.swift
 //  PupGuesser
 //
-//  Created by See Soon Kiat on 31/5/25.
+//  Created by See Soon Kiat on 3/6/25.
 //
 
 import Foundation
@@ -20,20 +20,21 @@ protocol GameViewModelProtocol {
     func saveScores()
 }
 
-class GameViewModel: GameViewModelProtocol {
-    private var breedsList: [Breed] = [] // Cached
-    private var networkService: NetworkServiceProtocol
-    private var gameStorage: GameStorageProtocol
+class GameViewModel: ObservableObject, GameViewModelProtocol {
+    @Published var gameState: GameState = .loading
+    @Published var currentGameRound: GameRound?
+    @Published var currentRound = 0
+    @Published var streak = 0
+    @Published var score = 0
+    @Published var selectedOption: Breed?
     
     // Game Configuration
     private let numOptions = 4
     
-    // Game State
-    var currentGameRound: GameRound?
-    var currentRound = 0
-    var streak = 0
-    var score = 0
-    var selectedOption: Breed?
+    private var breedsList: [Breed] = [] // Cached
+    private var cancellables = Set<AnyCancellable>()
+    private var networkService: NetworkServiceProtocol
+    private var gameStorage: GameStorageProtocol
     
     init(networkService: NetworkServiceProtocol = NetworkService(),
          gameStorage: GameStorageProtocol = GameStorage()) {
@@ -41,16 +42,35 @@ class GameViewModel: GameViewModelProtocol {
         self.gameStorage = gameStorage
     }
     
+    func loadNextRound() {
+        gameState = .loading
+        
+        fetchNextRound()
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { [weak self] completion in
+                    if case .failure = completion {
+                        self?.gameState = .error
+                    }
+                },
+                receiveValue: { [weak self] gameRound in
+                    guard let self = self else { return }
+                    self.currentGameRound = gameRound
+                    self.gameState = .playing
+                }
+            )
+            .store(in: &cancellables)
+    }
+    
     func fetchNextRound() -> AnyPublisher<GameRound, Error> {
+        gameState = .loading
         selectedOption = nil
+        
         return fetchBreedList()
             .flatMap(setupGameRound)
             .map { [weak self] gameRound in
-                guard let self else {
-                    return gameRound
-                }
+                guard let self = self else { return gameRound }
                 self.gameStorage.savePuppy(breed: gameRound.selectedBreed, imageURL: gameRound.imageData.url)
-                self.currentGameRound = gameRound
                 self.currentRound += 1
                 return gameRound
             }
@@ -58,18 +78,19 @@ class GameViewModel: GameViewModelProtocol {
     }
     
     func submitAnswer(index: Int) -> Bool {
-        guard let currentGameRound, selectedOption == nil else {
-            return false
-        }
+        guard let currentGameRound, selectedOption == nil else { return false }
+        
         let answer = currentGameRound.options[index]
-        selectedOption = answer
         let isCorrect = answer == currentGameRound.selectedBreed
+        selectedOption = answer
+        
         if isCorrect {
             score += 1
             streak += 1
         } else {
             streak = 0
         }
+        
         saveScores()
         return isCorrect
     }
@@ -83,10 +104,6 @@ class GameViewModel: GameViewModelProtocol {
             return networkService.getAllBreeds()
         }
         return Just(self.breedsList).setFailureType(to: Error.self).eraseToAnyPublisher()
-    }
-    
-    private func fetchRandomImage(for breed: Breed) -> AnyPublisher<ImageData, Error> {
-        return networkService.getRandomImage(breed: breed)
     }
     
     private func setupGameRound(_ breeds: [Breed]) -> AnyPublisher<GameRound, Error> {
@@ -103,6 +120,16 @@ class GameViewModel: GameViewModelProtocol {
             }
             .eraseToAnyPublisher()
     }
+    
+    private func fetchRandomImage(for breed: Breed) -> AnyPublisher<ImageData, Error> {
+        return networkService.getRandomImage(breed: breed)
+    }
+}
+
+enum GameState {
+    case loading
+    case playing
+    case error
 }
 
 struct GameRound {

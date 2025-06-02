@@ -1,8 +1,8 @@
 //
-//  PupGuesserTests.swift
+//  GameSpec.swift
 //  PupGuesserTests
 //
-//  Created by See Soon Kiat on 31/5/25.
+//  Created by See Soon Kiat on 3/6/25.
 //
 
 import Quick
@@ -27,6 +27,24 @@ final class GameSpec: QuickSpec {
                 mockGameStorage = MockStorage()
                 gameVM = GameViewModel(networkService: mockNetworkService,
                                        gameStorage: mockGameStorage)
+            }
+            
+            it("should be able to load the next round and update the game state correctly") {
+                waitUntil(timeout: .seconds(3)) { done in
+                    gameVM.$currentGameRound
+                        .sink { completion in
+                            if case .failure(let error) = completion {
+                                fail("Failed to fetch next round - \(error)")
+                            }
+                            done()
+                        } receiveValue: { _ in
+                            
+                        }
+                        .store(in: &cancellables)
+                    gameVM.loadNextRound()
+                }
+                expect(gameVM.currentGameRound).toNot(beNil())
+                expect(gameVM.gameState).to(equal(GameState.playing))
             }
             
             it("should be able to fetch the next round correctly") {

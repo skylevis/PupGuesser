@@ -7,60 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 208BB2012DEAF08D007E2DB4 /* SnapKit */; };
-		20A982152DEC003A00B2630E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 20A982142DEC003A00B2630E /* SDWebImage */; };
-		20C7383E2DEC393500F151FA /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 20C7383D2DEC393500F151FA /* Quick */; };
-		20C738412DEC396100F151FA /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 20C738402DEC396100F151FA /* Nimble */; };
+		20F5B47B2DEE0377006E942D /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 20F5B47A2DEE0377006E942D /* Nimble */; };
+		20F5B47E2DEE038D006E942D /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 20F5B47D2DEE038D006E942D /* Quick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		208BB1BA2DEADF5D007E2DB4 /* PBXContainerItemProxy */ = {
+		20F5B4092DEE0277006E942D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 208BB1A02DEADF5A007E2DB4 /* Project object */;
+			containerPortal = 20F5B3F22DEE0272006E942D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 208BB1A72DEADF5A007E2DB4;
+			remoteGlobalIDString = 20F5B3F92DEE0272006E942D;
 			remoteInfo = PupGuesser;
 		};
-		208BB1C42DEADF5D007E2DB4 /* PBXContainerItemProxy */ = {
+		20F5B4132DEE0277006E942D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 208BB1A02DEADF5A007E2DB4 /* Project object */;
+			containerPortal = 20F5B3F22DEE0272006E942D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 208BB1A72DEADF5A007E2DB4;
+			remoteGlobalIDString = 20F5B3F92DEE0272006E942D;
 			remoteInfo = PupGuesser;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGuesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F5B3FA2DEE0272006E942D /* PupGuesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PupGuesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F5B4082DEE0277006E942D /* PupGuesserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F5B4122DEE0277006E942D /* PupGuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupGuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		208BB20E2DEB0B29007E2DB4 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */ = {
+		205D266C2DEE34F300E26494 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
+			target = 20F5B3F92DEE0272006E942D /* PupGuesser */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		208BB1AA2DEADF5A007E2DB4 /* PupGuesser */ = {
+		20F5B3FC2DEE0272006E942D /* PupGuesser */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				208BB20E2DEB0B29007E2DB4 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */,
+				205D266C2DEE34F300E26494 /* Exceptions for "PupGuesser" folder in "PupGuesser" target */,
 			);
 			path = PupGuesser;
 			sourceTree = "<group>";
 		};
-		208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */ = {
+		20F5B40B2DEE0277006E942D /* PupGuesserTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PupGuesserTests;
 			sourceTree = "<group>";
 		};
-		208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */ = {
+		20F5B4152DEE0277006E942D /* PupGuesserUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PupGuesserUITests;
 			sourceTree = "<group>";
@@ -68,25 +66,23 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		208BB1A52DEADF5A007E2DB4 /* Frameworks */ = {
+		20F5B3F72DEE0272006E942D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20A982152DEC003A00B2630E /* SDWebImage in Frameworks */,
-				208BB2022DEAF08D007E2DB4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1B62DEADF5D007E2DB4 /* Frameworks */ = {
+		20F5B4052DEE0277006E942D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20C7383E2DEC393500F151FA /* Quick in Frameworks */,
-				20C738412DEC396100F151FA /* Nimble in Frameworks */,
+				20F5B47E2DEE038D006E942D /* Quick in Frameworks */,
+				20F5B47B2DEE0377006E942D /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1C02DEADF5D007E2DB4 /* Frameworks */ = {
+		20F5B40F2DEE0277006E942D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,22 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		208BB19F2DEADF5A007E2DB4 = {
+		20F5B3F12DEE0272006E942D = {
 			isa = PBXGroup;
 			children = (
-				208BB1AA2DEADF5A007E2DB4 /* PupGuesser */,
-				208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */,
-				208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */,
-				208BB1A92DEADF5A007E2DB4 /* Products */,
+				20F5B3FC2DEE0272006E942D /* PupGuesser */,
+				20F5B40B2DEE0277006E942D /* PupGuesserTests */,
+				20F5B4152DEE0277006E942D /* PupGuesserUITests */,
+				20F5B3FB2DEE0272006E942D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		208BB1A92DEADF5A007E2DB4 /* Products */ = {
+		20F5B3FB2DEE0272006E942D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */,
-				208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */,
-				208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */,
+				20F5B3FA2DEE0272006E942D /* PupGuesser.app */,
+				20F5B4082DEE0277006E942D /* PupGuesserTests.xctest */,
+				20F5B4122DEE0277006E942D /* PupGuesserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,144 +115,141 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		208BB1A72DEADF5A007E2DB4 /* PupGuesser */ = {
+		20F5B3F92DEE0272006E942D /* PupGuesser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 208BB1CD2DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesser" */;
+			buildConfigurationList = 20F5B41C2DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesser" */;
 			buildPhases = (
-				208BB1A42DEADF5A007E2DB4 /* Sources */,
-				208BB1A52DEADF5A007E2DB4 /* Frameworks */,
-				208BB1A62DEADF5A007E2DB4 /* Resources */,
+				20F5B3F62DEE0272006E942D /* Sources */,
+				20F5B3F72DEE0272006E942D /* Frameworks */,
+				20F5B3F82DEE0272006E942D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				208BB1AA2DEADF5A007E2DB4 /* PupGuesser */,
+				20F5B3FC2DEE0272006E942D /* PupGuesser */,
 			);
 			name = PupGuesser;
 			packageProductDependencies = (
-				208BB2012DEAF08D007E2DB4 /* SnapKit */,
-				20A982142DEC003A00B2630E /* SDWebImage */,
 			);
 			productName = PupGuesser;
-			productReference = 208BB1A82DEADF5A007E2DB4 /* PupGuesser.app */;
+			productReference = 20F5B3FA2DEE0272006E942D /* PupGuesser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		208BB1B82DEADF5D007E2DB4 /* PupGuesserTests */ = {
+		20F5B4072DEE0277006E942D /* PupGuesserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 208BB1D02DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */;
+			buildConfigurationList = 20F5B41F2DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesserTests" */;
 			buildPhases = (
-				208BB1B52DEADF5D007E2DB4 /* Sources */,
-				208BB1B62DEADF5D007E2DB4 /* Frameworks */,
-				208BB1B72DEADF5D007E2DB4 /* Resources */,
+				20F5B4042DEE0277006E942D /* Sources */,
+				20F5B4052DEE0277006E942D /* Frameworks */,
+				20F5B4062DEE0277006E942D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				208BB1BB2DEADF5D007E2DB4 /* PBXTargetDependency */,
+				20F5B40A2DEE0277006E942D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				208BB1BC2DEADF5D007E2DB4 /* PupGuesserTests */,
+				20F5B40B2DEE0277006E942D /* PupGuesserTests */,
 			);
 			name = PupGuesserTests;
 			packageProductDependencies = (
-				20C7383D2DEC393500F151FA /* Quick */,
-				20C738402DEC396100F151FA /* Nimble */,
+				20F5B47A2DEE0377006E942D /* Nimble */,
+				20F5B47D2DEE038D006E942D /* Quick */,
 			);
 			productName = PupGuesserTests;
-			productReference = 208BB1B92DEADF5D007E2DB4 /* PupGuesserTests.xctest */;
+			productReference = 20F5B4082DEE0277006E942D /* PupGuesserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		208BB1C22DEADF5D007E2DB4 /* PupGuesserUITests */ = {
+		20F5B4112DEE0277006E942D /* PupGuesserUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 208BB1D32DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */;
+			buildConfigurationList = 20F5B4222DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */;
 			buildPhases = (
-				208BB1BF2DEADF5D007E2DB4 /* Sources */,
-				208BB1C02DEADF5D007E2DB4 /* Frameworks */,
-				208BB1C12DEADF5D007E2DB4 /* Resources */,
+				20F5B40E2DEE0277006E942D /* Sources */,
+				20F5B40F2DEE0277006E942D /* Frameworks */,
+				20F5B4102DEE0277006E942D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				208BB1C52DEADF5D007E2DB4 /* PBXTargetDependency */,
+				20F5B4142DEE0277006E942D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				208BB1C62DEADF5D007E2DB4 /* PupGuesserUITests */,
+				20F5B4152DEE0277006E942D /* PupGuesserUITests */,
 			);
 			name = PupGuesserUITests;
 			packageProductDependencies = (
 			);
 			productName = PupGuesserUITests;
-			productReference = 208BB1C32DEADF5D007E2DB4 /* PupGuesserUITests.xctest */;
+			productReference = 20F5B4122DEE0277006E942D /* PupGuesserUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		208BB1A02DEADF5A007E2DB4 /* Project object */ = {
+		20F5B3F22DEE0272006E942D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					208BB1A72DEADF5A007E2DB4 = {
+					20F5B3F92DEE0272006E942D = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					208BB1B82DEADF5D007E2DB4 = {
+					20F5B4072DEE0277006E942D = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 208BB1A72DEADF5A007E2DB4;
+						LastSwiftMigration = 1640;
+						TestTargetID = 20F5B3F92DEE0272006E942D;
 					};
-					208BB1C22DEADF5D007E2DB4 = {
+					20F5B4112DEE0277006E942D = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 208BB1A72DEADF5A007E2DB4;
+						TestTargetID = 20F5B3F92DEE0272006E942D;
 					};
 				};
 			};
-			buildConfigurationList = 208BB1A32DEADF5A007E2DB4 /* Build configuration list for PBXProject "PupGuesser" */;
+			buildConfigurationList = 20F5B3F52DEE0272006E942D /* Build configuration list for PBXProject "PupGuesser" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 208BB19F2DEADF5A007E2DB4;
+			mainGroup = 20F5B3F12DEE0272006E942D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */,
-				20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */,
+				20F5B4792DEE0377006E942D /* XCRemoteSwiftPackageReference "Nimble" */,
+				20F5B47C2DEE038D006E942D /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 208BB1A92DEADF5A007E2DB4 /* Products */;
+			productRefGroup = 20F5B3FB2DEE0272006E942D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				208BB1A72DEADF5A007E2DB4 /* PupGuesser */,
-				208BB1B82DEADF5D007E2DB4 /* PupGuesserTests */,
-				208BB1C22DEADF5D007E2DB4 /* PupGuesserUITests */,
+				20F5B3F92DEE0272006E942D /* PupGuesser */,
+				20F5B4072DEE0277006E942D /* PupGuesserTests */,
+				20F5B4112DEE0277006E942D /* PupGuesserUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		208BB1A62DEADF5A007E2DB4 /* Resources */ = {
+		20F5B3F82DEE0272006E942D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1B72DEADF5D007E2DB4 /* Resources */ = {
+		20F5B4062DEE0277006E942D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1C12DEADF5D007E2DB4 /* Resources */ = {
+		20F5B4102DEE0277006E942D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,21 +259,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		208BB1A42DEADF5A007E2DB4 /* Sources */ = {
+		20F5B3F62DEE0272006E942D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1B52DEADF5D007E2DB4 /* Sources */ = {
+		20F5B4042DEE0277006E942D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		208BB1BF2DEADF5D007E2DB4 /* Sources */ = {
+		20F5B40E2DEE0277006E942D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,20 +283,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		208BB1BB2DEADF5D007E2DB4 /* PBXTargetDependency */ = {
+		20F5B40A2DEE0277006E942D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
-			targetProxy = 208BB1BA2DEADF5D007E2DB4 /* PBXContainerItemProxy */;
+			target = 20F5B3F92DEE0272006E942D /* PupGuesser */;
+			targetProxy = 20F5B4092DEE0277006E942D /* PBXContainerItemProxy */;
 		};
-		208BB1C52DEADF5D007E2DB4 /* PBXTargetDependency */ = {
+		20F5B4142DEE0277006E942D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 208BB1A72DEADF5A007E2DB4 /* PupGuesser */;
-			targetProxy = 208BB1C42DEADF5D007E2DB4 /* PBXContainerItemProxy */;
+			target = 20F5B3F92DEE0272006E942D /* PupGuesser */;
+			targetProxy = 20F5B4132DEE0277006E942D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		208BB1CB2DEADF5D007E2DB4 /* Debug */ = {
+		20F5B41A2DEE0278006E942D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +359,7 @@
 			};
 			name = Debug;
 		};
-		208BB1CC2DEADF5D007E2DB4 /* Release */ = {
+		20F5B41B2DEE0278006E942D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -421,7 +414,7 @@
 			};
 			name = Release;
 		};
-		208BB1CE2DEADF5D007E2DB4 /* Debug */ = {
+		20F5B41D2DEE0278006E942D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -430,11 +423,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PupGuesser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,13 +439,15 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		208BB1CF2DEADF5D007E2DB4 /* Release */ = {
+		20F5B41E2DEE0278006E942D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -462,11 +456,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PupGuesser/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,16 +472,19 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		208BB1D12DEADF5D007E2DB4 /* Debug */ = {
+		20F5B4202DEE0278006E942D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -496,17 +492,21 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGuesser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PupGuesser";
 			};
 			name = Debug;
 		};
-		208BB1D22DEADF5D007E2DB4 /* Release */ = {
+		20F5B4212DEE0278006E942D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -514,14 +514,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.test.project.PupGuesserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PupGuesser.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PupGuesser";
 			};
 			name = Release;
 		};
-		208BB1D42DEADF5D007E2DB4 /* Debug */ = {
+		20F5B4232DEE0278006E942D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -536,7 +538,7 @@
 			};
 			name = Debug;
 		};
-		208BB1D52DEADF5D007E2DB4 /* Release */ = {
+		20F5B4242DEE0278006E942D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -554,38 +556,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		208BB1A32DEADF5A007E2DB4 /* Build configuration list for PBXProject "PupGuesser" */ = {
+		20F5B3F52DEE0272006E942D /* Build configuration list for PBXProject "PupGuesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				208BB1CB2DEADF5D007E2DB4 /* Debug */,
-				208BB1CC2DEADF5D007E2DB4 /* Release */,
+				20F5B41A2DEE0278006E942D /* Debug */,
+				20F5B41B2DEE0278006E942D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		208BB1CD2DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesser" */ = {
+		20F5B41C2DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				208BB1CE2DEADF5D007E2DB4 /* Debug */,
-				208BB1CF2DEADF5D007E2DB4 /* Release */,
+				20F5B41D2DEE0278006E942D /* Debug */,
+				20F5B41E2DEE0278006E942D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		208BB1D02DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserTests" */ = {
+		20F5B41F2DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				208BB1D12DEADF5D007E2DB4 /* Debug */,
-				208BB1D22DEADF5D007E2DB4 /* Release */,
+				20F5B4202DEE0278006E942D /* Debug */,
+				20F5B4212DEE0278006E942D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		208BB1D32DEADF5D007E2DB4 /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */ = {
+		20F5B4222DEE0278006E942D /* Build configuration list for PBXNativeTarget "PupGuesserUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				208BB1D42DEADF5D007E2DB4 /* Debug */,
-				208BB1D52DEADF5D007E2DB4 /* Release */,
+				20F5B4232DEE0278006E942D /* Debug */,
+				20F5B4242DEE0278006E942D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -593,33 +595,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		20F5B4792DEE0377006E942D /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
-		20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.21.0;
-			};
-		};
-		20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick";
+			repositoryURL = "https://github.com/Quick/Nimble";
 			requirement = {
 				branch = main;
 				kind = branch;
 			};
 		};
-		20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		20F5B47C2DEE038D006E942D /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
+			repositoryURL = "https://github.com/Quick/Quick";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -628,27 +614,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		208BB2012DEAF08D007E2DB4 /* SnapKit */ = {
+		20F5B47A2DEE0377006E942D /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 208BB1EC2DEAE3BD007E2DB4 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		20A982142DEC003A00B2630E /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 20A982132DEC003A00B2630E /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		20C7383D2DEC393500F151FA /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 20C7383C2DEC393500F151FA /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		20C738402DEC396100F151FA /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 20C7383F2DEC396100F151FA /* XCRemoteSwiftPackageReference "Nimble" */;
+			package = 20F5B4792DEE0377006E942D /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
+		};
+		20F5B47D2DEE038D006E942D /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20F5B47C2DEE038D006E942D /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 208BB1A02DEADF5A007E2DB4 /* Project object */;
+	rootObject = 20F5B3F22DEE0272006E942D /* Project object */;
 }

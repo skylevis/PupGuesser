@@ -1,8 +1,8 @@
 //
-//  NetworkManager.swift
+//  NetworkService.swift
 //  PupGuesser
 //
-//  Created by See Soon Kiat on 31/5/25.
+//  Created by See Soon Kiat on 3/6/25.
 //
 
 import Foundation
@@ -54,6 +54,7 @@ class NetworkService: NetworkServiceProtocol {
                 return imageURL
             }
             .flatMap(loadImage)
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
@@ -64,7 +65,9 @@ class NetworkService: NetworkServiceProtocol {
                 do {
                     let (data, _) = try await self.session.data(from: url)
                     let imageData = ImageData(url: url.absoluteString, data: data)
-                    promise(.success(imageData))
+                    await MainActor.run {
+                        promise(.success(imageData))
+                    }
                 } catch {
                     promise(.failure(NetworkError.unexpected(message: "Failed to load image for \(url.absoluteString)")))
                 }

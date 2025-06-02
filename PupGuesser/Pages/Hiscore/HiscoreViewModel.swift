@@ -2,7 +2,7 @@
 //  HiscoreViewModel.swift
 //  PupGuesser
 //
-//  Created by See Soon Kiat on 1/6/25.
+//  Created by See Soon Kiat on 3/6/25.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ protocol HiscoreViewModelProtocol {
     func fetchScores() -> HiScores
 }
 
-class HiscoreViewModel: HiscoreViewModelProtocol {
+class HiscoreViewModel: HiscoreViewModelProtocol, ObservableObject {
     private var gameStorage: GameStorageProtocol
     
     init(gameStorage: GameStorageProtocol = GameStorage()) {
